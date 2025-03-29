@@ -1,4 +1,5 @@
 
+using Scalar.AspNetCore;
 using YoutubeDownloaderAPI.Endpoints;
 using YoutubeDownloaderAPI.Services;
 
@@ -23,6 +24,7 @@ namespace YoutubeDownloaderAPI
             if (app.Environment.IsDevelopment())
             {
                 app.MapOpenApi();
+                app.MapScalarApiReference();
             }
 
             app.UseHttpsRedirection();
